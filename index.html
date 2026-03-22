@@ -359,6 +359,9 @@
     .devicon-mysql-plain { color: #4479a1; }
     .devicon-git-plain { color: #f05032; }
     .devicon-npm-original-wordmark { color: #cb3837; }
+    .devicon-docker-plain { color: #2496ed; }
+    .devicon-github-original { color: #e8edf5; }
+    .devicon-bash-plain { color: #4eaa25; }
 
     /* About visual */
     .about-visual { position: relative; }
@@ -673,18 +676,79 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.5rem; }
+    /* MOBILE — hasta 480px */
+    @media (max-width: 480px) {
+      nav { padding: 1rem 1.2rem; }
       .nav-links { display: none; }
-      #hero { padding: 0 1.5rem; padding-top: 5rem; }
-      #about { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+      #hero { padding: 0 1.2rem; padding-top: 4.5rem; }
+      h1.hero-name { font-size: clamp(2.8rem, 12vw, 4rem); }
+      .hero-desc { font-size: 0.95rem; }
+      #about { grid-template-columns: 1fr; padding: 4rem 1.2rem; gap: 2.5rem; }
       .about-visual { display: none; }
-      #projects { padding: 5rem 1.5rem; }
+      .stack-grid { grid-template-columns: repeat(2, 1fr); }
+      #projects { padding: 4rem 1.2rem; }
       .project-grid { grid-template-columns: 1fr; }
-      #skills { padding: 5rem 1.5rem; }
-      #contact { padding: 5rem 1.5rem; }
+      .project-card { padding: 1.8rem; }
+      #skills { padding: 4rem 1.2rem; }
+      #contact { padding: 4rem 1.2rem; }
+      .contact-big { font-size: clamp(2rem, 10vw, 3rem); }
+      .contact-links { flex-direction: column; align-items: center; }
+      footer { padding: 1.2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      .scroll-hint { display: none; }
+    }
+
+    /* TABLET — 481px a 768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      #hero { padding: 0 2rem; padding-top: 5rem; }
+      h1.hero-name { font-size: clamp(3rem, 10vw, 5rem); }
+      #about { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
+      .about-visual { display: none; }
+      .stack-grid { grid-template-columns: repeat(3, 1fr); }
+      #projects { padding: 5rem 2rem; }
+      .project-grid { grid-template-columns: 1fr; }
+      .project-card { padding: 2rem; }
+      #skills { padding: 5rem 2rem; }
+      #contact { padding: 5rem 2rem; }
+      .contact-links { flex-direction: column; align-items: center; }
       footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
       .scroll-hint { display: none; }
+    }
+
+    /* TABLET GRANDE / NOTEBOOK PEQUEÑA — 769px a 1024px */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      nav { padding: 1.5rem 2.5rem; }
+      #hero { padding: 0 2.5rem; padding-top: 5rem; }
+      #about { padding: 6rem 2.5rem; gap: 3rem; }
+      .stack-grid { grid-template-columns: repeat(3, 1fr); }
+      #projects { padding: 6rem 2.5rem; }
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+      #skills { padding: 6rem 2.5rem; }
+      #contact { padding: 6rem 2.5rem; }
+      footer { padding: 1.5rem 2.5rem; }
+    }
+
+    /* DESKTOP / NOTEBOOK — 1025px a 1440px */
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      nav { padding: 1.5rem 3rem; }
+      #hero { padding: 0 3rem; padding-top: 5rem; }
+      #about { padding: 7rem 3rem; }
+      #projects { padding: 7rem 3rem; }
+      #skills { padding: 7rem 3rem; }
+      #contact { padding: 7rem 3rem; }
+      footer { padding: 2rem 3rem; }
+    }
+
+    /* PANTALLAS GRANDES — más de 1440px */
+    @media (min-width: 1441px) {
+      nav { padding: 1.5rem 6rem; }
+      #hero { padding: 0 6rem; padding-top: 5rem; }
+      #about { padding: 8rem 6rem; }
+      #projects { padding: 8rem 6rem; }
+      #skills { padding: 8rem 6rem; }
+      #contact { padding: 8rem 6rem; }
+      footer { padding: 2rem 6rem; }
     }
   </style>
 </head>
@@ -740,7 +804,19 @@
       <div class="stack-grid">
   <div class="stack-item">
     <span class="stack-icon"><i class="devicon-html5-plain"></i></span>
-    <span class="stack-name">HTML/CSS/JS</span>
+    <span class="stack-name">HTML</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-css3-plain"></i></span>
+    <span class="stack-name">CSS</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-javascript-plain"></i></span>
+    <span class="stack-name">JavaScript</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-typescript-plain"></i></span>
+    <span class="stack-name">TypeScript</span>
   </div>
   <div class="stack-item">
     <span class="stack-icon"><i class="devicon-react-original"></i></span>
@@ -749,10 +825,6 @@
   <div class="stack-item">
     <span class="stack-icon"><i class="devicon-nodejs-plain"></i></span>
     <span class="stack-name">Node.js</span>
-  </div>
-  <div class="stack-item">
-    <span class="stack-icon"><i class="devicon-typescript-plain"></i></span>
-    <span class="stack-name">TypeScript</span>
   </div>
   <div class="stack-item">
     <span class="stack-icon"><i class="devicon-python-plain"></i></span>
@@ -771,12 +843,28 @@
     <span class="stack-name">MySQL</span>
   </div>
   <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-docker-plain"></i></span>
+    <span class="stack-name">Docker</span>
+  </div>
+  <div class="stack-item">
     <span class="stack-icon"><i class="devicon-git-plain"></i></span>
-    <span class="stack-name">Git/GitHub</span>
+    <span class="stack-name">Git</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-github-original"></i></span>
+    <span class="stack-name">GitHub</span>
   </div>
   <div class="stack-item">
     <span class="stack-icon"><i class="devicon-npm-original-wordmark"></i></span>
-    <span class="stack-name">npm/APIs</span>
+    <span class="stack-name">npm</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="fa-solid fa-plug" style="color:var(--accent)"></i></span>
+    <span class="stack-name">APIs</span>
+  </div>
+  <div class="stack-item">
+    <span class="stack-icon"><i class="devicon-bash-plain"></i></span>
+    <span class="stack-name">Bash</span>
   </div>
   <div class="stack-item">
     <span class="stack-icon"><i class="fa-solid fa-arrows-spin" style="color:var(--accent)"></i></span>
@@ -876,6 +964,38 @@
         </div>
       </div>
 
+      <div class="project-card">
+        <p class="project-num">// 005</p>
+        <h3 class="project-title">Demo Clínica</h3>
+        <p class="project-desc">Sistema de gestión clínica desarrollado en equipo. Incluye autenticación, dashboard, gestión de pacientes y turnos. Participé en el frontend y base de datos con Next.js, Prisma y TypeScript.</p>
+        <div class="project-tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Prisma</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/reedq1/demo-clinica" target="_blank" class="project-link">⌥ github</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <p class="project-num">// 006</p>
+        <h3 class="project-title">CICI App</h3>
+        <p class="project-desc">Plataforma de gestión para academia de inglés desarrollada en equipo. Administra alumnos, clases y profesores. Participé en frontend y backend con contenedorización mediante Docker.</p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Prisma</span>
+          <span class="tag">Docker</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/endbel/cici-app" target="_blank" class="project-link">⌥ github</a>
+        </div>
+      </div>
+
     </div>
   </section>
   
@@ -890,7 +1010,16 @@
       <div class="skills-row reveal">
         <div class="skill-bar-item">
           <div class="skill-bar-header">
-            <span class="skill-bar-name">HTML / CSS</span>
+            <span class="skill-bar-name">HTML</span>
+            <span class="skill-bar-level">intermedio</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">CSS</span>
             <span class="skill-bar-level">intermedio</span>
           </div>
           <div class="skill-bar-track">
@@ -971,11 +1100,56 @@
         </div>
         <div class="skill-bar-item">
           <div class="skill-bar-header">
-            <span class="skill-bar-name">Git / GitHub</span>
+            <span class="skill-bar-name">Git</span>
             <span class="skill-bar-level">intermedio</span>
           </div>
           <div class="skill-bar-track">
             <div class="skill-bar-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">GitHub</span>
+            <span class="skill-bar-level">intermedio</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">npm</span>
+            <span class="skill-bar-level">básico</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="50"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">APIs</span>
+            <span class="skill-bar-level">básico</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="50"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">Docker</span>
+            <span class="skill-bar-level">básico</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="30"></div>
+          </div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-header">
+            <span class="skill-bar-name">Bash</span>
+            <span class="skill-bar-level">básico</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="30"></div>
           </div>
         </div>
         <div class="skill-bar-item">
