@@ -219,7 +219,7 @@
 
     /* Scroll indicator */
     .scroll-hint {
-      position: absolute;
+      position: fixed;
       bottom: 3rem;
       right: 4rem;
       writing-mode: vertical-rl;
@@ -557,9 +557,11 @@
     }
 
     /* SKILLS */
-    #skills {
+   #skills {
       padding: 8rem 4rem;
       border-top: 1px solid var(--border);
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .skills-inner { max-width: 1200px; margin: 0 auto; }
@@ -872,6 +874,11 @@
 
     @media (max-width: 768px) {
       .hamburger { display: flex; }
+    }
+
+    @media (max-width: 768px) {
+  .cursor, .cursor-ring { display: none; }
+  body { cursor: auto; }
     }
   </style>
 </head>
@@ -1313,7 +1320,7 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="reveal">
-      <p class="section-label" style="justify-content:center">04 — contacto</p>
+      <p class="section-label">04 — contacto</p>
       <h2 class="contact-big">¿Trabajamos<br><span class="accent">juntos?</span></h2>
       <p class="contact-sub">Abierta a oportunidades, proyectos freelance y colaboraciones.</p>
       <div class="contact-links">
