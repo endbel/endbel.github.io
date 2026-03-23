@@ -328,6 +328,46 @@ function App() {
               </a>
             </div>
           </div>
+
+          <div className="project-card">
+            <p className="project-num">// 005</p>
+            <h3 className="project-title">Demo Clínica</h3>
+            <p className="project-desc">
+              Sistema de gestión clínica desarrollado en equipo. Incluye autenticación, dashboard, gestión de pacientes y turnos. Participé en el frontend y base de datos con Next.js, Prisma y TypeScript.
+            </p>
+            <div className="project-tags">
+              <span className="tag">Next.js</span>
+              <span className="tag">React</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">Tailwind</span>
+              <span className="tag">Prisma</span>
+            </div>
+            <div className="project-links">
+              <a href="https://github.com/reedq1/demo-clinica" target="_blank" rel="noreferrer" className="project-link">
+                ⌥ github
+              </a>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <p className="project-num">// 006</p>
+            <h3 className="project-title">CICI App</h3>
+            <p className="project-desc">
+              Plataforma de gestión para academia de inglés desarrollada en equipo. Administra alumnos, clases y profesores. Participé en frontend y backend con contenedorización mediante Docker.
+            </p>
+            <div className="project-tags">
+              <span className="tag">JavaScript</span>
+              <span className="tag">HTML/CSS</span>
+              <span className="tag">Tailwind</span>
+              <span className="tag">Prisma</span>
+              <span className="tag">Docker</span>
+            </div>
+            <div className="project-links">
+              <a href="https://github.com/endbel/cici-app" target="_blank" rel="noreferrer" className="project-link">
+                ⌥ github
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -342,7 +382,17 @@ function App() {
           <div className="skills-row reveal">
             <div className="skill-bar-item">
               <div className="skill-bar-header">
-                <span className="skill-bar-name">HTML / CSS</span>
+                <span className="skill-bar-name">HTML</span>
+                <span className="skill-bar-level">intermedio</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="75"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">CSS</span>
                 <span className="skill-bar-level">intermedio</span>
               </div>
               <div className="skill-bar-track">
@@ -432,11 +482,61 @@ function App() {
 
             <div className="skill-bar-item">
               <div className="skill-bar-header">
-                <span className="skill-bar-name">Git / GitHub</span>
+                <span className="skill-bar-name">Git</span>
                 <span className="skill-bar-level">intermedio</span>
               </div>
               <div className="skill-bar-track">
                 <div className="skill-bar-fill" data-width="60"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">GitHub</span>
+                <span className="skill-bar-level">intermedio</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="60"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">npm</span>
+                <span className="skill-bar-level">básico</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="50"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">APIs</span>
+                <span className="skill-bar-level">básico</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="50"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">Docker</span>
+                <span className="skill-bar-level">básico</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="30"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">Bash</span>
+                <span className="skill-bar-level">básico</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="30"></div>
               </div>
             </div>
 
