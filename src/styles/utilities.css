@@ -1,0 +1,84 @@
+/* Utility Classes */
+
+/* Typography Utilities */
+.mono-font {
+  font-family: var(--font-mono);
+}
+
+.mono-small {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: var(--letter-spacing-mono);
+}
+
+.mono-xs {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+/* Spacing Utilities */
+.section-container {
+  max-width: var(--section-max-width);
+  margin: var(--section-margin);
+}
+
+/* Visibility */
+.hide-mobile {
+  display: none;
+}
+
+.hide-tablet {
+  display: none;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .hide-mobile {
+    display: auto;
+  }
+
+  .hide-tablet {
+    display: auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hide-desktop {
+    display: auto;
+  }
+}
+
+/* Transitions */
+.transition-color {
+  transition: color var(--transition-fast);
+}
+
+.transition-all {
+  transition: all var(--transition-fast);
+}
+
+/* Text Colors */
+.text-accent {
+  color: var(--accent);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* Flexbox Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
