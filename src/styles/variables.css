@@ -32,7 +32,7 @@
   --section-padding-md: var(--section-pad-y-md) var(--container-pad);
   --section-padding-sm: var(--section-pad-y-sm) var(--container-pad);
   --section-margin: 0 auto;
-  --section-max-width: 1200px;
+  --section-max-width: 1320px;
 
   /* Common values */
   --transition-fast: 0.2s;
