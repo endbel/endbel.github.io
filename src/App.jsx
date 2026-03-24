@@ -58,6 +58,11 @@ function App() {
         </a>
         <ul className="nav-links">
           <li>
+            <a href="#hero" data-num="00">
+              junior developer
+            </a>
+          </li>
+          <li>
             <a href="#about" data-num="01">
               sobre mí
             </a>
@@ -110,6 +115,11 @@ function App() {
         </a>
         <ul className="sidebar-links">
           <li>
+            <a href="#hero" data-num="00" onClick={closeSidebar}>
+              junior developer
+            </a>
+          </li>
+          <li>
             <a href="#about" data-num="01" onClick={closeSidebar}>
               sobre mí
             </a>
@@ -148,7 +158,7 @@ function App() {
       <section id="hero">
         <div className="glow-blob"></div>
         <div className="hero-inner">
-          <p className="hero-tag"> JUNIOR DEVELOPER — DISPONIBLE</p>
+          <p className="hero-tag"> 00 JUNIOR DEVELOPER</p>
           <h1 className="hero-name">
             <span className="hero-line">
               {heroLines[0]}
@@ -176,18 +186,23 @@ function App() {
               className="recruiter-scan"
               aria-label="Resumen para reclutadores"
             >
-              <ul className="scan-list">
-                <li className="scan-stack">
-                  react · javascript · typescript · node.js · sql
-                </li>
-                <li>especialista frontend · visión product · ux-driven</li>
-                <li>remoto/híbrido · utc-3 · disponibilidad inmediata</li>
-              </ul>
+              <div className="scan-shell">
+                <ul className="scan-list">
+                  <li className="scan-stack">
+                    react · javascript · typescript · node.js · sql
+                  </li>
+                  <li>especialista frontend · visión product · ux-driven</li>
+                  <li>remoto/híbrido · utc-3 · disponibilidad inmediata</li>
+                </ul>
+                <a
+                  href="#projects"
+                  className="scan-availability is-project-link"
+                >
+                  PROYECTOS
+                </a>
+              </div>
             </div>
             <div className="hero-cta">
-              <a href="#projects" className="btn-primary">
-                Proyectos
-              </a>
               <a href="#contact" className="btn-outline">
                 Contactar
               </a>
@@ -221,7 +236,7 @@ function App() {
         <div
           className={`reveal ${aboutVisible ? "visible" : ""} ${aboutSeen ? "seen" : ""}`}
         >
-          <p className="section-label">01 — sobre mí</p>
+          <p className="section-label">01 sobre mí</p>
           <div className="about-snapshot">
             <p className="about-snapshot-title">perfil y habilidades clave</p>
             <div
@@ -295,7 +310,7 @@ function App() {
           className={`projects-header reveal ${projectsVisible ? "visible" : ""}`}
         >
           <div>
-            <p className="section-label">02 — proyectos</p>
+            <p className="section-label">02 proyectos</p>
             <h2 className="section-title">
               Lo que
               <br />
@@ -496,7 +511,7 @@ function App() {
       <section id="skills" ref={skillsRef}>
         <div className="skills-inner">
           <div className={`reveal ${skillsVisible ? "visible" : ""}`}>
-            <p className="section-label">03 — habilidades</p>
+            <p className="section-label">03 habilidades</p>
             <h2 className="section-title">Mi stack.</h2>
             <p className="skills-context">
               Tooling del proyecto: Vite + React + ESLint, con flujo de
@@ -805,15 +820,12 @@ function App() {
       {/* CONTACT */}
       <section id="contact" ref={contactRef}>
         <div className={`reveal ${contactVisible ? "visible" : ""}`}>
-          <p className="section-label">04 — contacto</p>
+          <p className="section-label">04 contacto</p>
           <h2 className="contact-big">
             ¿Trabajamos
             <br />
             <span className="accent">juntos?</span>
           </h2>
-          <p className="contact-sub">
-            Abierta a oportunidades, proyectos freelance y colaboraciones.
-          </p>
           <div className="availability-box" aria-label="Disponibilidad laboral">
             <p className="availability-title">disponibilidad</p>
             <ul className="availability-list">

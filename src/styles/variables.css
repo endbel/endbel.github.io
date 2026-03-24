@@ -13,6 +13,7 @@
   /* Typography */
   --font-sans: 'Cabinet Grotesk', sans-serif;
   --font-mono: 'Fira Code', monospace;
+  --font-extended: 'Syne', 'Cabinet Grotesk', sans-serif;
 
   /* Spacing */
   --vw: 1vw;
