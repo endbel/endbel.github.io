@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import profilePhoto from "./assets/hero.png";
 import { useCursor } from "./hooks/useCursor";
 import { useHeroTerminalTyping } from "./hooks/useHeroTerminalTyping";
 import { useInteractiveTerminal } from "./hooks/useInteractiveTerminal";
@@ -25,6 +26,7 @@ function App() {
   const { history } = useInteractiveTerminal();
   const { lines: heroLines, activeLine, isDone } = useHeroTerminalTyping();
   const terminalBodyRef = useRef(null);
+  const [photoUnlocked, setPhotoUnlocked] = useState(false);
 
   useEffect(() => {
     const links = document.querySelectorAll("a, button");
@@ -244,14 +246,14 @@ function App() {
               aria-label="Resumen de stack y habilidades"
             >
               <span>Frontend: HTML, CSS, JavaScript, React, TypeScript</span>
+              <span>Backend y datos: Node.js, PHP, Python, Java, SQL</span>
+              <span>Bases de datos: MySQL, MongoDB, Prisma</span>
+              <span>Tooling: Vite, npm, ESLint, Git, GitHub Actions</span>
               <span>
-                Backend y datos: Node.js, PHP, Python, Java, MySQL, MongoDB,
-                Prisma
+                Arquitectura UI: componentes reutilizables y escalables
               </span>
-              <span>
-                Tooling y calidad: Vite, Git/GitHub, GitHub Actions, ESLint,
-                npm, Docker
-              </span>
+              <span>API & estado: fetch, async/await, manejo de errores</span>
+              <span>Calidad: clean code, refactor, documentación técnica</span>
               <span>
                 Fortalezas: resolución de problemas y trabajo en equipo
               </span>
@@ -297,6 +299,28 @@ function App() {
                   </span>
                 ))}
               </div>
+            </div>
+            <div className="about-profile-slot">
+              <button
+                type="button"
+                className={`about-profile-lock ${photoUnlocked ? "unlocked" : "locked"}`}
+                onClick={() => setPhotoUnlocked((prev) => !prev)}
+                aria-pressed={photoUnlocked}
+                aria-label={
+                  photoUnlocked
+                    ? "Ocultar foto de perfil"
+                    : "Revelar foto de perfil"
+                }
+              >
+                <img
+                  src={profilePhoto}
+                  alt="Foto de perfil de Belén"
+                  className="about-profile-photo"
+                />
+                <span className="about-profile-overlay" aria-hidden="true">
+                  {photoUnlocked ? "click para bloquear" : "click para revelar"}
+                </span>
+              </button>
             </div>
             <div className="accent-corner"></div>
             <div className="accent-corner2"></div>
