@@ -2,10 +2,13 @@ import { useEffect, useRef } from "react";
 import { useCursor } from "./hooks/useCursor";
 import { useHeroTerminalTyping } from "./hooks/useHeroTerminalTyping";
 import { useInteractiveTerminal } from "./hooks/useInteractiveTerminal";
+import { useResponsiveViewport } from "./hooks/useResponsiveViewport";
 import { useRevealOnScroll } from "./hooks/useRevealOnScroll";
 import { useSidebar } from "./hooks/useSidebar";
 
 function App() {
+  useResponsiveViewport();
+
   const { cursorRef, ringRef, handleHoverEnter, handleHoverLeave } =
     useCursor();
   const { isOpen: sidebarOpen, openSidebar, closeSidebar } = useSidebar();
@@ -168,26 +171,46 @@ function App() {
               )}
             </span>
           </h1>
-          <div
-            className="recruiter-scan"
-            aria-label="Resumen para reclutadores"
-          >
-            <p className="scan-title">scan rápido — perfil</p>
-            <ul className="scan-list">
-              <li>stack: React, JavaScript, Node.js, TypeScript, SQL</li>
-              <li>foco: frontend con criterio de producto y UX</li>
-              <li>
-                modalidad: remoto/híbrido · UTC-3 · disponibilidad inmediata
-              </li>
-            </ul>
-          </div>
-          <div className="hero-cta">
-            <a href="#projects" className="btn-primary">
-              Ver proyectos
-            </a>
-            <a href="#contact" className="btn-outline">
-              Contactar
-            </a>
+          <div className="hero-actions">
+            <div
+              className="recruiter-scan"
+              aria-label="Resumen para reclutadores"
+            >
+              <ul className="scan-list">
+                <li className="scan-stack">
+                  react · javascript · typescript · node.js · sql
+                </li>
+                <li>especialista frontend · visión product · ux-driven</li>
+                <li>remoto/híbrido · utc-3 · disponibilidad inmediata</li>
+              </ul>
+            </div>
+            <div className="hero-cta">
+              <a href="#projects" className="btn-primary">
+                Proyectos
+              </a>
+              <a href="#contact" className="btn-outline">
+                Contactar
+              </a>
+              <div className="hero-social">
+                <a
+                  href="https://github.com/endbel"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="GitHub"
+                >
+                  GitHub
+                </a>
+                <span className="social-separator">·</span>
+                <a
+                  href="https://www.linkedin.com/in/miperfilbelenrodriguez/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="LinkedIn"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="scroll-hint">scroll</div>
@@ -801,7 +824,10 @@ function App() {
             </ul>
           </div>
           <div className="contact-links">
-            <a href="mailto:tu@email.com" className="btn-primary">
+            <a
+              href="mailto:devbel_@outlook.com"
+              className="btn-primary contact-email-btn"
+            >
               ✉ enviar email
             </a>
             <a
