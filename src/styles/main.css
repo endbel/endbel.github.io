@@ -1207,13 +1207,34 @@ footer .accent {
   nav { padding: 1rem 1.2rem; }
   .nav-links { display: none; }
   .hero-inner { padding-right: 0; }
-  #hero { padding: 0 1.2rem; padding-top: 4.5rem; }
-  h1.hero-name { font-size: clamp(2.8rem, 12vw, 4rem); }
+  #hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 0 1.2rem 2rem;
+    padding-top: 4.5rem;
+  }
+  h1.hero-name {
+    font-size: clamp(2.45rem, 10.8vw, 3.35rem);
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+  .hero-tag {
+    margin-bottom: 1rem;
+  }
+  h1.hero-name .line2 {
+    color: rgba(232,237,245,0.8);
+    -webkit-text-stroke: 0;
+    letter-spacing: 0.04em;
+  }
   .hero-desc { font-size: 0.95rem; }
   .hero-actions { grid-template-columns: 1fr; gap: 1rem; }
   .recruiter-scan { padding: 0.85rem 0.9rem; }
-  .hero-cta { flex-direction: column; gap: 0.7rem; width: 100%; }
-  .btn-primary, .btn-outline { width: 100%; }
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 0.7rem; width: 100%; }
+  .btn-primary, .btn-outline {
+    width: 100%;
+    text-align: left;
+    padding-left: 1.2rem;
+  }
   .scan-list li { font-size: 0.73rem; letter-spacing: 0.03em; line-height: 1.5; }
   .scan-stack { font-size: 0.82rem; }
   .hero-social { display: none; }
@@ -1257,11 +1278,28 @@ footer .accent {
   nav { padding: 1.2rem 2rem; }
   .nav-links { display: none; }
   .hero-inner { padding-right: 0; }
-  #hero { padding: 0 2rem; padding-top: 5rem; }
-  h1.hero-name { font-size: clamp(3rem, 10vw, 5rem); }
+  #hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 0 2rem 2rem;
+    padding-top: 5rem;
+  }
+  h1.hero-name {
+    font-size: clamp(2.7rem, 8.8vw, 4.25rem);
+    margin-bottom: 1.35rem;
+    line-height: 0.99;
+  }
+  .hero-tag {
+    margin-bottom: 1.1rem;
+  }
+  h1.hero-name .line2 {
+    color: rgba(232,237,245,0.78);
+    -webkit-text-stroke: 0;
+    letter-spacing: 0.05em;
+  }
   .hero-actions { grid-template-columns: 1fr; gap: 1rem; }
-  .hero-cta { flex-direction: column; gap: 0.8rem; width: 100%; }
-  .btn-primary, .btn-outline { width: 100%; text-align: center; }
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 0.8rem; width: 100%; }
+  .btn-primary, .btn-outline { width: 100%; text-align: left; padding-left: 1.25rem; }
   .scan-list li { font-size: 0.71rem; }
   .hero-social { display: none; }
   #about { grid-template-columns: 1fr; padding: 5rem 2rem; gap: 3rem; }
