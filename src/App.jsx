@@ -182,7 +182,7 @@ function App() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/miperfilbelenrodriguez/"
+            href="https://www.linkedin.com/in/devbelen/"
             target="_blank"
             rel="noreferrer"
           >
@@ -254,7 +254,7 @@ function App() {
                 </a>
                 <span className="social-separator">·</span>
                 <a
-                  href="https://www.linkedin.com/in/miperfilbelenrodriguez/"
+                  href="https://www.linkedin.com/in/devbelen/"
                   target="_blank"
                   rel="noreferrer"
                   title="LinkedIn"
@@ -1038,7 +1038,7 @@ function App() {
                     ⌥ GitHub
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/miperfilbelenrodriguez/"
+                    href="https://www.linkedin.com/in/devbelen/"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-outline"

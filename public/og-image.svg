@@ -1,0 +1,49 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="1200" y1="0" x2="0" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E1624" />
+      <stop offset="1" stop-color="#070C14" />
+    </linearGradient>
+    <linearGradient id="accent" x1="140" y1="86" x2="980" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00F5A0" />
+      <stop offset="1" stop-color="#00D4FF" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <rect x="48" y="48" width="1104" height="534" rx="20" stroke="#1A2434" stroke-width="2" />
+  <rect x="72" y="72" width="1056" height="486" rx="16" fill="#0A111B" stroke="#243348" stroke-width="1" />
+
+  <path d="M72 168H1128" stroke="#1C2A3D" stroke-width="1" />
+  <circle cx="108" cy="120" r="8" fill="#00F5A0" opacity="0.8" />
+  <circle cx="136" cy="120" r="8" fill="#00D4FF" opacity="0.7" />
+  <circle cx="164" cy="120" r="8" fill="#8B9DB6" opacity="0.55" />
+
+  <text x="116" y="244" fill="#8AA0B9" font-size="28" font-family="Fira Code, monospace" letter-spacing="4">PORTFOLIO</text>
+  <text x="116" y="332" fill="#F2F7FF" font-size="94" font-weight="700" font-family="Cabinet Grotesk, Syne, sans-serif" letter-spacing="1">BELEN</text>
+  <text x="116" y="402" fill="#A9B8CB" font-size="44" font-weight="500" font-family="Cabinet Grotesk, Syne, sans-serif" letter-spacing="3">JUNIOR DEVELOPER</text>
+
+  <g filter="url(#glow)">
+    <path d="M116 452H790" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" />
+  </g>
+
+  <rect x="116" y="486" width="174" height="44" rx="8" fill="#101A28" stroke="#00F5A0" stroke-opacity="0.5" />
+  <text x="144" y="514" fill="#00F5A0" font-size="19" font-family="Fira Code, monospace" letter-spacing="2">REACT</text>
+
+  <rect x="304" y="486" width="224" height="44" rx="8" fill="#101A28" stroke="#00D4FF" stroke-opacity="0.5" />
+  <text x="332" y="514" fill="#00D4FF" font-size="19" font-family="Fira Code, monospace" letter-spacing="2">TYPESCRIPT</text>
+
+  <rect x="542" y="486" width="188" height="44" rx="8" fill="#101A28" stroke="#8AA0B9" stroke-opacity="0.5" />
+  <text x="570" y="514" fill="#B9C7D7" font-size="19" font-family="Fira Code, monospace" letter-spacing="2">NODE.JS</text>
+
+  <text x="854" y="514" fill="#8AA0B9" font-size="21" font-family="Fira Code, monospace" text-anchor="end">github.com/devbelen</text>
+  <text x="1084" y="514" fill="#00F5A0" font-size="21" font-family="Fira Code, monospace" text-anchor="end">/</text>
+</svg>

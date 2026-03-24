@@ -29,14 +29,18 @@ const TERMINAL_SEQUENCE = [
 ];
 
 export function useInteractiveTerminal() {
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState(() => {
+    if (TERMINAL_SEQUENCE.length === 0) {
+      return [];
+    }
+
+    return [{ type: TERMINAL_SEQUENCE[0].type, text: "" }];
+  });
 
   useEffect(() => {
     let lineIndex = 0;
     let charIndex = 0;
     let timerId;
-
-    setHistory([{ type: TERMINAL_SEQUENCE[0].type, text: "" }]);
 
     const typeNext = () => {
       if (lineIndex >= TERMINAL_SEQUENCE.length) {
