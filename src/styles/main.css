@@ -850,7 +850,10 @@ h2.section-title {
 .devicon-githubactions-plain { color: #2088ff; }
 .devicon-prisma-original { color: #2d3748; }
 .devicon-mongodb-plain { color: #47a248; }
-.devicon-eslint-original { color: #4b32c3; }
+.devicon-nextjs-original,
+.devicon-nextjs-plain { color: #e8edf5; }
+.devicon-eslint-original,
+.devicon-eslint-plain { color: #4b32c3; }
 
 /* About visual */
 .about-visual {
@@ -1288,8 +1291,37 @@ h2.section-title {
   line-height: 1.6;
 }
 
+.skills-categories {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.7rem;
+}
+
+.skills-category-card {
+  border: 1px solid rgba(0,245,160,0.2);
+  background: rgba(0,245,160,0.04);
+  padding: 0.75rem 0.8rem;
+}
+
+.skills-category-title {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+
+.skills-category-items {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(232,237,245,0.9);
+}
+
 .skills-row {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;

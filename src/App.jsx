@@ -44,8 +44,9 @@ function App() {
       },
       hero: {
         recruiterSummary: "Resumen para reclutadores",
-        line2: "especialista frontend · visión product · ux-driven",
-        line3: "remoto/híbrido · utc-3 · disponibilidad inmediata",
+        stackLine: "react · next.js · typescript · node.js · prisma · sql",
+        line2: "full stack · api rest · clean code · foco en negocio",
+        line3: "freelance-ready · comunicación clara · remoto · utc-3",
         projectsCta: "PROYECTOS",
         contactCta: "Contactar",
         scroll: "scroll",
@@ -76,7 +77,7 @@ function App() {
         title: "Mi stack.",
         intermediate: "intermedio alto",
         basic: "intermedio",
-        english: "Inglés",
+        english: "Inglés (B2)",
       },
       contact: {
         sectionLabel: "04 contacto",
@@ -109,8 +110,9 @@ function App() {
       },
       hero: {
         recruiterSummary: "Recruiter summary",
-        line2: "frontend specialist · product mindset · ux-driven",
-        line3: "remote/hybrid · utc-3 · immediate availability",
+        stackLine: "react · next.js · typescript · node.js · prisma · sql",
+        line2: "full stack · rest api · clean code · business focused",
+        line3: "freelance-ready · clear communication · remote · utc-3",
         projectsCta: "PROJECTS",
         contactCta: "Contact",
         scroll: "scroll",
@@ -141,7 +143,7 @@ function App() {
         title: "My stack.",
         intermediate: "upper intermediate",
         basic: "intermediate",
-        english: "English",
+        english: "English (B2)",
       },
       contact: {
         sectionLabel: "04 contact",
@@ -419,9 +421,7 @@ function App() {
             >
               <div className="scan-shell">
                 <ul className="scan-list">
-                  <li className="scan-stack">
-                    react · javascript · typescript · node.js · sql
-                  </li>
+                  <li className="scan-stack">{t.hero.stackLine}</li>
                   <li>{t.hero.line2}</li>
                   <li>{t.hero.line3}</li>
                 </ul>
@@ -475,39 +475,39 @@ function App() {
             <div className="about-pills" aria-label={t.about.pillsAria}>
               <span>
                 {language === "es"
-                  ? "Frontend: HTML, CSS, JavaScript, React, TypeScript"
-                  : "Frontend: HTML, CSS, JavaScript, React, TypeScript"}
+                  ? "Soporte técnico: diagnóstico, resolución y seguimiento de incidentes"
+                  : "Technical support: diagnosis, resolution, and incident follow-up"}
               </span>
               <span>
                 {language === "es"
-                  ? "Backend y datos: Node.js, PHP, Python, Java, SQL"
-                  : "Backend and data: Node.js, PHP, Python, Java, SQL"}
+                  ? "Comunicación efectiva con clientes y equipos técnicos"
+                  : "Effective communication with customers and technical teams"}
               </span>
               <span>
                 {language === "es"
-                  ? "Bases de datos: MySQL, MongoDB, Prisma"
-                  : "Databases: MySQL, MongoDB, Prisma"}
+                  ? "Trabajo colaborativo en entornos dinámicos y orientados a servicio"
+                  : "Collaborative work in dynamic, service-oriented environments"}
               </span>
               <span>Tooling: Vite, npm, ESLint, Git, GitHub Actions</span>
               <span>
                 {language === "es"
-                  ? "Arquitectura UI: componentes reutilizables y escalables"
-                  : "UI architecture: reusable and scalable components"}
+                  ? "Gestión de tickets, documentación y trazabilidad de casos"
+                  : "Ticket management, documentation, and case traceability"}
               </span>
               <span>
                 {language === "es"
-                  ? "API & estado: fetch, async/await, manejo de errores"
-                  : "API & state: fetch, async/await, error handling"}
+                  ? "Atención multicanal y enfoque en experiencia de usuario"
+                  : "Multi-channel support and user experience focus"}
               </span>
               <span>
                 {language === "es"
-                  ? "Calidad: clean code, refactor, documentación técnica"
-                  : "Quality: clean code, refactor, technical documentation"}
+                  ? "Resolución de problemas con enfoque analítico y proactivo"
+                  : "Problem solving with an analytical and proactive approach"}
               </span>
               <span>
                 {language === "es"
-                  ? "Fortalezas: resolución de problemas y trabajo en equipo"
-                  : "Strengths: problem solving and teamwork"}
+                  ? "Organización, priorización y gestión del tiempo"
+                  : "Organization, prioritization, and time management"}
               </span>
             </div>
           </div>
@@ -938,6 +938,53 @@ function App() {
           </div>
 
           <div
+            className={`skills-categories reveal ${skillsVisible ? "visible" : ""}`}
+          >
+            <article className="skills-category-card">
+              <p className="skills-category-title">
+                {language === "es" ? "Lenguajes" : "Languages"}
+              </p>
+              <p className="skills-category-items">
+                JavaScript, TypeScript, Python, Java, PHP, SQL, HTML5/CSS3
+              </p>
+            </article>
+            <article className="skills-category-card">
+              <p className="skills-category-title">
+                {language === "es" ? "Frameworks y UI" : "Frameworks and UI"}
+              </p>
+              <p className="skills-category-items">
+                React, Next.js, Tailwind CSS
+              </p>
+            </article>
+            <article className="skills-category-card">
+              <p className="skills-category-title">
+                {language === "es" ? "Bases de Datos" : "Databases"}
+              </p>
+              <p className="skills-category-items">MySQL, MongoDB, Prisma</p>
+            </article>
+            <article className="skills-category-card">
+              <p className="skills-category-title">
+                {language === "es"
+                  ? "Herramientas Empresariales"
+                  : "Enterprise Tools"}
+              </p>
+              <p className="skills-category-items">CRM, Avaya, Slack</p>
+            </article>
+            <article className="skills-category-card">
+              <p className="skills-category-title">
+                {language === "es"
+                  ? "Soporte y Soft Skills"
+                  : "Support & Soft Skills"}
+              </p>
+              <p className="skills-category-items">
+                {language === "es"
+                  ? "Comunicación, gestión de tickets, trabajo en equipo, empatía, resolución de incidentes"
+                  : "Communication, ticket management, teamwork, empathy, incident resolution"}
+              </p>
+            </article>
+          </div>
+
+          <div
             className={`skills-row reveal ${skillsVisible ? "visible" : ""}`}
           >
             <div className="skill-bar-item">
@@ -1002,6 +1049,32 @@ function App() {
               </div>
               <div className="skill-bar-track">
                 <div className="skill-bar-fill" data-width="58"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">
+                  <i className="devicon-nextjs-plain devicon-nextjs-original"></i>
+                  Next.js
+                </span>
+                <span className="skill-bar-level">{t.skills.basic}</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="56"></div>
+              </div>
+            </div>
+
+            <div className="skill-bar-item">
+              <div className="skill-bar-header">
+                <span className="skill-bar-name">
+                  <i className="devicon-tailwindcss-original"></i>
+                  Tailwind CSS
+                </span>
+                <span className="skill-bar-level">{t.skills.basic}</span>
+              </div>
+              <div className="skill-bar-track">
+                <div className="skill-bar-fill" data-width="57"></div>
               </div>
             </div>
 
@@ -1164,7 +1237,7 @@ function App() {
             <div className="skill-bar-item">
               <div className="skill-bar-header">
                 <span className="skill-bar-name">
-                  <i className="devicon-eslint-original"></i>
+                  <i className="devicon-eslint-plain devicon-eslint-original"></i>
                   ESLint
                 </span>
                 <span className="skill-bar-level">{t.skills.intermediate}</span>
@@ -1181,7 +1254,7 @@ function App() {
                     className="fa-solid fa-plug"
                     style={{ color: "var(--accent)" }}
                   ></i>
-                  APIs
+                  REST API
                 </span>
                 <span className="skill-bar-level">{t.skills.basic}</span>
               </div>
@@ -1199,7 +1272,7 @@ function App() {
                 <span className="skill-bar-level">{t.skills.basic}</span>
               </div>
               <div className="skill-bar-track">
-                <div className="skill-bar-fill" data-width="48"></div>
+                <div className="skill-bar-fill" data-width="62"></div>
               </div>
             </div>
 
@@ -1228,7 +1301,7 @@ function App() {
                 <span className="skill-bar-level">{t.skills.intermediate}</span>
               </div>
               <div className="skill-bar-track">
-                <div className="skill-bar-fill" data-width="55"></div>
+                <div className="skill-bar-fill" data-width="70"></div>
               </div>
             </div>
           </div>
